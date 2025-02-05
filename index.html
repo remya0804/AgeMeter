@@ -59,11 +59,16 @@
             if(d2 >= d1){
                 d3 = d2 - d1 
             } else{
-                m3--;
+                if(m3 > 0){
+                    m3--;
+                }else{
+                    m3 = 0
+                }
+
                 d3 = getDaysInMonth(y1,m1) + d2 - d1
             }
             if(userInput.value){
-                result.innerHTML = `<span>Wow!</span> You are <span>${y3}</span> years, <span>${m3}</span> months and <span>${d3}</span> days old. Wishing you happiness, health, and endless joy!🎉✨`
+                result.innerHTML = `<span>Wow!</span> You are <span>${y3}</span> year(s), <span>${m3}</span> month(s) and <span>${d3}</span> day(s) old. Wishing you happiness, health, and endless joy!🎉✨`
             } else{
                 result.innerHTML = '⚠️ Please select a date! 📅😊'
             }
